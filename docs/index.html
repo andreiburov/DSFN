@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dynamic Surface Function Networks for Clothed Human Bodies</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153109836-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-153109836-1');
+    </script>
+</head>
+
+<body>
+
+<div class="w3-container" id="paper">
+    <div class="w3-content" style="max-width:850px">
+  
+    <h2 align="center" id="title"><b>Dynamic Surface Function Networks <br/>for Clothed Human Bodies</b></h2>
+
+    <p align="center" class="center_text" id="authors">
+        <a target="_blank" href="http://www.niessnerlab.org/members/andrei_burov/profile.html">Andrei Burov</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nie&szlig;ner</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="https://justusthies.github.io/">Justus Thies</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+
+    <p class="center_text" align="center">
+    Technical University of Munich
+    </p>
+
+        <h3 class="w3-left-align" id="video"><b>Abstract</b></h3>
+        <p>
+We present a novel method for temporal coherent reconstruction and tracking of clothed humans. Given a monocular RGB-D sequence, we learn a person-specific body model which is based on a dynamic surface function network. To this end, we explicitly model the surface of the person using a multi-layer perceptron (MLP) which is embedded into the canonical space of the SMPL body model. With classical forward rendering, the represented surface can be rasterized using the topology of a template mesh. For each surface point of the template mesh, the MLP is evaluated to predict the actual surface location. To handle pose-dependent deformations, the MLP is conditioned on the SMPL pose parameters. We show that this surface representation as well as the pose parameters can be learned in a self-supervised fashion using the principle of analysis-by-synthesis and differentiable rasterization. As a result, we are able to reconstruct a temporally coherent mesh sequence from the input data. The underlying surface representation can be used to synthesize new animations of the reconstructed person including pose-dependent deformations.
+        </p>
+
+        <h3 class="w3-left-align" id="video"><b>Video</b></h3>
+	<p>
+	<div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="850" height="480" src="https://www.youtube.com/embed/4wbSi9Sqdm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	</p>
+
+        <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
+	[<a href="https://arxiv.org/pdf/2104.03978.pdf" target="_blank">Paper</a>]
+	[<a href="https://arxiv.org/abs/2104.03978" target="_blank">Arxiv</a>]
+	[<a href="https://github.com/andreiburov/DSFN" target="_blank">GitHub</a>]
+        <center>
+        <a href="https://arxiv.org/pdf/2104.03978.pdf" target="_blank"><img src="paper_preview-8.jpg" style="max-width:100%"/></a>
+        </center>
+
+        If you find our work useful, please consider citing it:
+
+<pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 11px">
+@misc{burov2021dsfn,
+      title={Dynamic Surface Function Networks for Clothed Human Bodies}, 
+      author={Andrei Burov and Matthias Nie{\ss}ner and Justus Thies},
+      year={2021},
+      eprint={2104.03978},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</pre>
+
+        <h3 class="w3-left-align" id="dataset"><b>Dataset</b></h3>
+        If you would like to access our sequences, please contact us directly by email: andrei.burov at tum.de
+    </div>
+    <br/>
+
+</div>
+
+</body>
+
+</html>
+
